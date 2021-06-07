@@ -1,0 +1,82 @@
+.header {
+  background-color: $header-bg-color;
+}
+.header .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.gamburgerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.gamburgerMenuBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18x;
+  cursor: pointer;
+}
+
+.gamburgerMenuBtn span {
+  position: relative;
+  width: 20px;
+  border: 1px solid $nav-color;
+  background-color: $nav-color;
+}
+
+.gamburgerMenuBtn span::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  top: -6px;
+  left: -1px;
+  border: 1px solid $nav-color;
+  background-color: $nav-color;
+}
+
+.gamburgerMenuBtn span::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  bottom: -6px;
+  left: -1px;
+  border: 1px solid $nav-color;
+  background-color: $nav-color;
+}
+
+.cartLink {
+  display: block;
+  padding: 18px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo .head {
+  position: relative;
+}
+
+.logo .logoText {
+  position: absolute;
+  top: 30px;
+}
+
+.logo .butterfly {
+  position: absolute;
+  top: 60px;
+}
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialIcons li:not(:last-child) {
+  margin-right: 20px;
+}
