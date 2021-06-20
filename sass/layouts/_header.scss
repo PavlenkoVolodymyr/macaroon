@@ -1,10 +1,15 @@
 .header {
+  position: fixed;
+  width: 100%;
+  min-width: 320px;
   background-color: $header-bg-color;
 }
+
 .header .container {
   padding-left: 0;
   padding-right: 0;
 }
+
 .gamburgerMenu {
   display: flex;
   justify-content: space-between;
@@ -13,6 +18,7 @@
 }
 
 .gamburgerMenuBtn {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +31,44 @@
   width: 20px;
   border: 1px solid $nav-color;
   background-color: $nav-color;
+}
+
+.checkbox {
+  position: absolute;
+  apacity: 0;
+}
+
+#checkbox:checked ~ .gamburgerMenuBtn span {
+  transform: rotate(45deg);
+}
+
+#checkbox:checked ~ .gamburgerMenuBtn span::before {
+  transform: rotate(90deg);
+  top: -1px;
+}
+
+#checkbox:checked ~ .gamburgerMenuBtn span::after {
+  display: none;
+}
+
+.menuLinks {
+  visibility: hidden;
+  position: fixed;
+  top: 68%;
+  // left: 25%;
+  // display: flex;
+  // flex-direction: column;
+  display: block;
+  min-width: 320px;
+  width: 100%;
+  // overflow-y: scroll;
+  height: calc(100% - 68%);
+  overflow: auto;
+  background-color: $header-bg-color;
+}
+
+#checkbox:checked ~ .menuLinks {
+  visibility: visible;
 }
 
 .gamburgerMenuBtn span::before {
@@ -45,6 +89,9 @@
   left: -1px;
   border: 1px solid $nav-color;
   background-color: $nav-color;
+}
+
+#checkbox {
 }
 
 .cartLink {
@@ -71,6 +118,10 @@
   top: 60px;
 }
 
+.itemDesktop.is-hiden {
+  display: none;
+}
+
 .socialIcons {
   display: flex;
   align-items: center;
@@ -79,4 +130,24 @@
 
 .socialIcons li:not(:last-child) {
   margin-right: 20px;
+}
+
+@media screen and (min-width: 800px) {
+  .gamburgerMenuBtn,
+  .checkbox {
+    display: none;
+  }
+
+  .menuLinks {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .navigationServices {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+@media screen and (min-width: 320px) and (man-width: 799px) {
 }

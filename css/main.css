@@ -647,6 +647,9 @@ summary {
 }
 
 .header {
+  position: fixed;
+  width: 100%;
+  min-width: 320px;
   background-color: #f7ebe5;
 }
 
@@ -669,6 +672,7 @@ summary {
 }
 
 .gamburgerMenuBtn {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -687,6 +691,42 @@ summary {
   width: 20px;
   border: 1px solid #2b1414;
   background-color: #2b1414;
+}
+
+.checkbox {
+  position: absolute;
+  apacity: 0;
+}
+
+#checkbox:checked ~ .gamburgerMenuBtn span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#checkbox:checked ~ .gamburgerMenuBtn span::before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: -1px;
+}
+
+#checkbox:checked ~ .gamburgerMenuBtn span::after {
+  display: none;
+}
+
+.menuLinks {
+  visibility: hidden;
+  position: fixed;
+  top: 68%;
+  display: block;
+  min-width: 320px;
+  width: 100%;
+  height: calc(100% - 68%);
+  overflow: auto;
+  background-color: #f7ebe5;
+}
+
+#checkbox:checked ~ .menuLinks {
+  visibility: visible;
 }
 
 .gamburgerMenuBtn span::before {
@@ -737,6 +777,10 @@ summary {
   top: 60px;
 }
 
+.itemDesktop.is-hiden {
+  display: none;
+}
+
 .socialIcons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -751,5 +795,30 @@ summary {
 
 .socialIcons li:not(:last-child) {
   margin-right: 20px;
+}
+
+@media screen and (min-width: 800px) {
+  .gamburgerMenuBtn,
+  .checkbox {
+    display: none;
+  }
+  .menuLinks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .navigationServices {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
 }
 /*# sourceMappingURL=main.css.map */

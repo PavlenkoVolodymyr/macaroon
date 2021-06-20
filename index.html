@@ -11,11 +11,12 @@
     <header class="header">
       <div class="container">
         <div class="gamburgerMenu">
-          <label class="gamburgerMenuBtn" for="">
+          <input type="checkbox" id="checkbox" />
+          <label class="gamburgerMenuBtn" for="checkbox">
             <span></span>
           </label>
-          <div>
-            <a href="" class="logo">
+          <div class="itemMobile is-hiden">
+            <a href="" class="logo logoMobile">
               <img class="head" src="./images/cap-logo.svg" alt="cap-logo" />
               <img
                 class="logoText"
@@ -32,56 +33,78 @@
           <a href="" class="cartLink">
             <img src="./images/cart.svg" alt="cart" />
           </a>
-        </div>
-        <nav class="navigationLinks">
-          <ul class="navigationLinks">
-            <li><a href="">Готовые наборы</a></li>
-            <li><a href="">Собрать свой набор</a></li>
-            <li>
-              <a href="">
-                Акции
-                <span>%</span>
-              </a>
-            </li>
-            <li><a href="">Каталог десертов</a></li>
-            <li><a href="">Корпоративные подарки</a></li>
-            <li><a href="">Оптовикам</a></li>
-          </ul>
-        </nav>
-        <nav class="navigationServices">
-          <ul class="navigationServices">
-            <li><a href="">Свадебные предложения</a></li>
-            <li><a href="">Наборы с печатью</a></li>
-            <li><a href="">Гарантии вкуса и свежести</a></li>
-            <li><a href="">Доставка и оплата</a></li>
-            <li><a href="">Контакты</a></li>
-          </ul>
-          <ul class="contacts">
-            <li>
-              <a href="">
-                <img src="./images/tell.svg" alt="tell" />
-                8 812 309-82-88
-              </a>
-            </li>
-            <li>
-              <ul class="socialIcons">
+
+          <div class="menuLinks">
+            <nav class="navigationLinks">
+              <ul class="navigationLinks">
+                <li><a href="">Готовые наборы</a></li>
+                <li><a href="">Собрать свой набор</a></li>
                 <li>
                   <a href="">
-                    <img src="./images/instagram.svg" alt="instagram" />
+                    Акции
+                    <span>%</span>
+                  </a>
+                </li>
+                <li class="itemDesktop is-hiden">
+                  <a href="" class="logo logoMobile">
+                    <img
+                      class="head"
+                      src="./images/cap-logo.svg"
+                      alt="cap-logo"
+                    />
+                    <img
+                      class="logoText"
+                      src="./images/logo-text.svg"
+                      alt="logo-text"
+                    />
+                    <img
+                      class="butterfly"
+                      src="./images/butterfly.svg"
+                      alt="butterfly"
+                    />
+                  </a>
+                </li>
+                <li><a href="">Каталог десертов</a></li>
+                <li><a href="">Корпоративные подарки</a></li>
+                <li><a href="">Оптовикам</a></li>
+              </ul>
+            </nav>
+            <nav class="navigationServices">
+              <ul class="navigationServices">
+                <li><a href="">Свадебные предложения</a></li>
+                <li><a href="">Наборы с печатью</a></li>
+                <li><a href="">Гарантии вкуса и свежести</a></li>
+                <li><a href="">Доставка и оплата</a></li>
+                <li><a href="">Контакты</a></li>
+              </ul>
+              <ul class="contacts">
+                <li>
+                  <a href="">
+                    <img src="./images/tell.svg" alt="tell" />
+                    8 812 309-82-88
                   </a>
                 </li>
                 <li>
-                  <a href="">
-                    <img src="./images/facebook.svg" alt="facebook" />
-                  </a>
-                </li>
-                <li>
-                  <a href=""><img src="./images/vk.svg" alt="vl" /></a>
+                  <ul class="socialIcons">
+                    <li>
+                      <a href="">
+                        <img src="./images/instagram.svg" alt="instagram" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <img src="./images/facebook.svg" alt="facebook" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href=""><img src="./images/vk.svg" alt="vl" /></a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
-            </li>
-          </ul>
-        </nav>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
   </body>
